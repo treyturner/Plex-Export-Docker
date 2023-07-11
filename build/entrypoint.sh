@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Sleeps for 15s to initialize"
+echo "Sleep for 15s to initialize"
 sleep 15s
 
 while true; do
@@ -13,12 +13,12 @@ while true; do
     rm -r /data/* || break
   fi
 
-  echo "Copping app-files to /data"
+  echo "Copying app files to /data..."
   cp -R /app/assets /data/ || break
   cp -R /app/plex-data/ /data/ || break
   cp /app/index.html /data/ || break
 
-  echo "Chmoding /data"
+  echo "Setting permissions..."
   chmod 0755 -R /data/ || break
 
   echo ""
