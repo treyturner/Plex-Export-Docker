@@ -3,14 +3,14 @@ version: "3"
 services:
   development-plexexport-php:
     build: ./build
-    image: ex0nuss/plex-export-docker
+    image: treyturner/plex-export-docker
     container_name: frontend-plexexport-php
     restart: unless-stopped
     volumes:
       - ./data-plexexport:/data
     environment:
       - PLEX_URL=http://192.168.178.100:32400
-      - PLEX_SECTIONS=Filme,Serien
+      - PLEX_SECTIONS=Concerts,Movies,TV Shows
       - PLEX_TOKEN=XXX
       - PLEX_INTERVAL=360m
     labels:
@@ -39,7 +39,3 @@ services:
       options:
         max-size: "10M"
         max-file: "4"
-
-### ENV-file presets ###
-# Europe/Berlin
-# 996
