@@ -1,5 +1,4 @@
-#!/bin/ash
-
+#!/bin/bash
 
 echo "Sleeps for 15s to initialize"
 sleep 15s
