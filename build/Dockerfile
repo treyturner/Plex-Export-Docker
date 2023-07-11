@@ -14,7 +14,7 @@ WORKDIR /app
 RUN git clone https://github.com/treyturner/Plex-Export.git . \
     #&& git clone https://github.com/dpDesignz/plex-export-responsive-skin \
     #&& cp -rf plex-export-responsive-skin/* ./ \
-    && rm LICENSE README.md
+    && rm README.md
 
 #Copies entrypoint-script for modifying .env-file
 COPY entrypoint.sh /
