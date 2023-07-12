@@ -8,7 +8,7 @@ while true; do
   php /app/cli.php -plex-url="$PLEX_URL" -sections="$PLEX_SECTIONS" -sort-skip-words="$PLEX_SORT_SKIP_WORDS" -token="$PLEX_TOKEN" || break
 
   echo ""
-  if [ -f /data/* ]; then
+  if [ "$(ls -A /data/)" ]; then
     echo "Removing old data"
     rm -r /data/* || break
   fi
